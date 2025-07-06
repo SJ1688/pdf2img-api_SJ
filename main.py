@@ -19,7 +19,7 @@ async def pdf2imgbase64(file: UploadFile = File(...)):
         img_b64 = base64.b64encode(buf.getvalue()).decode("utf-8")
         result.append("data:image/png;base64," + img_b64)
     return JSONResponse(content={"images": result})
-    import uvicorn
+
 import os
 
 if __name__ == "__main__":
